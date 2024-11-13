@@ -1,0 +1,185 @@
+:root {
+  font-family: "Poppins";
+  --primary: #5039d7;
+  --sec: #e6681a;
+  --tr: #eaeaea;
+  --fonttekanandarah: #ebd3d3;
+}
+
+.btnsigup {
+  align-items: center;
+  border-color: var(--primary);
+  color: var(--primary);
+  padding: 10px 30px;
+  font-weight: bold;
+}
+
+.btnlogin {
+  align-items: center;
+  background-color: var(--primary);
+  color: white;
+
+  padding: 10px 40px;
+  font-weight: bold;
+}
+
+.btnlogin :hover {
+  background-color: #eefcf3;
+  color: white;
+  border: 1px solid var(--primary);
+}
+
+.btnsigup:hover {
+  background-color: #bfb6f3;
+  color: #ffffff;
+  border: 1px solid;
+}
+
+.tekanandarah {
+  color: var(--sec);
+}
+.cardtekanandarah {
+  background-color: var(--primary);
+  border-radius: 20px;
+}
+.normal {
+  color: var(--fonttekanandarah);
+  font-size: 28px;
+}
+.tekananday {
+  color: var(--sec);
+  font-size: 24px;
+}
+.guladarah {
+  color: white;
+  font-size: 20px;
+}
+.catatantekanandarah {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.catatantekanandarah1 {
+  color: var(--sec);
+  font-size: 42px;
+  font-weight: bold;
+}
+.data {
+  font-weight: medium;
+}
+.labeltekanan {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+.form-control {
+  border: 1px solid;
+}
+.jadwal-makan {
+  font-size: 30px;
+  border-color: var(--sec);
+  background-color: white;
+  color: var(--sec);
+}
+.jadwal-makan:hover {
+  color: var(--sec);
+}
+.info {
+  color: white;
+  border: 1px solid;
+  border-color: var(--sec);
+  background-color: var(--sec);
+}
+.btn-simpan {
+  background-color: var(--sec);
+}
+.bg1 {
+  background-color: var(--primary);
+}
+.icons {
+  color: var(--sec);
+  background-color: white;
+  border-radius: 50%; /* Membuat ikon menjadi bulat */
+  padding: 8px; /* Menambahkan ruang di sekitar ikon */
+}
+.help {
+  font-size: 16px;
+}
+.footer1 {
+  background-color: var(--primary);
+}
+.footer2 {
+  background-color: var(--tr);
+  color: black;
+}
+.copy {
+  background-color: #3b336c;
+}
+
+/*index*/
+.beratbadan {
+  color: var(--sec);
+  font-size: 42px;
+  text-align: center;
+}
+.cek {
+  font-size: 42px;
+  text-align: center;
+}
+.bmi {
+  font-size: 18px;
+}
+.btn-detial {
+  background-color: var(--sec);
+  color: white;
+}
+.btn-outline {
+  border-color: var(--sec);
+  color: var(--sec);
+}
+
+/*obesity */
+/* .dokter1 {
+  border-radius: 100%;
+}
+.card {
+  background-color: #988bdf;
+}
+.body {
+  background-color: white;
+} */
+.btn-showmore {
+  border-color: black;
+  background-color: white;
+}
+
+.hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+  opacity: 0.5;
+  &:before {
+    content: "";
+    background: linear-gradient(to right, transparent, #818078, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+  }
+  &:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    color: black !important;
+
+    padding: 0 0.5em;
+    line-height: 1.5em;
+    color: #818078;
+    background-color: #fcfcfa;
+  }
+}

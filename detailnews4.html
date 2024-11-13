@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      padding-top: 56px;
+      /* Adjust this value based on your navbar height */
+    }
+
+    .myPurple {
+      color: #6610f2;
+    }
+
+    .col-md-2,
+    .col-md-4,
+    .col-md-5 {
+      margin-bottom: 20px;
+    }
+
+    .gluco {
+      color: #6610f2;
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    .tens {
+      color: black;
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    .glucodrop {
+      color: #6610f2;
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    .tensdrop {
+      color: black;
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    .titlenav {
+      margin-left: 240px;
+      text-decoration: none;
+    }
+
+    .titledrop {
+      margin-left: 60px;
+      text-decoration: none;
+    }
+
+    .nav-link.btn.btn-login {
+      background-color: #6610f2;
+      color: white;
+      border: 2px solid #6610f2;
+      border-radius: 5px;
+      padding: 5px 10px;
+      text-decoration: none;
+      width: 130px;
+    }
+
+    .nav-link.btn.btn-signup {
+      background-color: transparent;
+      color: inherit;
+      border: 2px solid #6610f2;
+      border-radius: 5px;
+      padding: 5px 10px;
+      text-decoration: none;
+      width: 130px;
+    }
+
+    .grafik {
+      color: black;
+      /* Warna hitam untuk tulisan "Grafik" */
+      font-weight: 700;
+    }
+
+    .gula-darah {
+      color: #E6681A;
+      /* Warna #E6681A untuk tulisan "Gula Darah" */
+      font-weight: 700;
+    }
+
+    .modal-content .btn-close {
+      border: 2px solid black;
+      border-radius: 50%;
+      color: black;
+      width: 25px;
+      height: 25px;
+      line-height: 1.5;
+      padding: 0;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
+    .modal-content .btn-close:hover {
+      background-color: #6610f2;
+      color: white;
+    }
+
+    .modal-header {
+      border-bottom: none;
+    }
+
+    .btnlkpr:hover {
+      border-color: #E6681A;
+      color: #E6681A;
+    }
+  </style>
+  <title>GLUCOTENS</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top shadow">
+    <div class="container">
+
+      <!-- Bagian Kiri -->
+      <div class="navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <div class="dropdown">
+              <a class="btn btn-secondary" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+              </a>
+
+              <ul class="dropdown-menu p-2" aria-labelledby="dropdownMenuLink" style="width: 270px;">
+                <li><a class="titledrop" href="index.html"><span class="glucodrop">Gluco</span><span
+                      class="tensdrop">Tens</span></a></li>
+                <li><a class="dropdown-item" href="#">Community</a></li>
+                <li><a class="dropdown-item" href="#">Popular searchers</a></li>
+                <li><a class="dropdown-item" href="#">About Dieases</a></li>
+                <li><a class="dropdown-item" href="#">PGDM</a></li>
+                <li><a class="dropdown-item" href="#">Notebook</a></li>
+                <li><a class="dropdown-item" href="#">Product</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <a class="titlenav" href="index.html"><span class="gluco">Gluco</span><span class="tens">Tens</span></a>
+
+      <div class="navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <div class="nav-link">
+              <i class="fas fa-bell fa-lg me-3" style="color: orange"></i>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link btn btn-login me-3" data-bs-toggle="modal"
+              data-bs-target="#modalLogin">Login</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link btn btn-signup" data-bs-toggle="modal" data-bs-target="#modalSignup">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid mt-5 p-5">
+    <div class="row">
+      <h1>Kids and Obesity</h1>
+    </div>
+    <div class="row">
+      <div class="col">
+        <span class="text-secondary">Medicaly Reviewer</span>
+        by
+        <span class="text-secondary">Dr. Andre Hinata</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col p-3">
+        <span>28 November, 2023</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-7">
+        <div class="row">
+          <img class="w-100" src="image/vid (3).png" alt="" />
+        </div>
+        <div class="row mt-4">
+          <h4>
+            BMI can be used to determined a person obesity or not. Obesity is
+            a condition characterized by excess body fat that poses serious
+            health risk. One og the main causes of obesity is the concumption
+            of junk food high in calories and sugar.
+          </h4>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="container px-4">
+          <div class="row">
+            <h2>More in preconception</h2>
+          </div>
+          <div class="row my-4">
+            <div class="container">
+              <div class="row my-4">
+                <h4>What is BMI?</h4>
+              </div>
+              <hr />
+              <div class="row my-4">
+                <h4>The evidience and implications of the global obesity</h4>
+              </div>
+              <hr />
+              <div class="row my-4">
+                <h4>
+                  The health risk and consequences of obesity and overweight
+                </h4>
+              </div>
+              <hr />
+              <div class="row my-4">
+                <h4>How to treat obesity?</h4>
+              </div>
+              <hr />
+              <div class="row my-4">
+                <h4>Why consume a lot of sugar and calori cause obesity?</h4>
+              </div>
+              <hr />
+              <div class="row my-4 text-center">
+                <div class="dropdown">
+                  <button class="btn border border-3 dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Show more
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-white mt-5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4 py footer1" style="margin-bottom: 0px !important;">
+          <div class="mt-5 ms-5">
+            <img src="image/GlucoTens.png" alt="" width="150" />
+            <h4 class="help mt-3">Help you to maintain your body from diseases by</h4>
+            <p class="mt-3 d-flex gap-4 mt-5">
+              Follow us
+              <a href="# " class=" text-decoration-none">
+                <i class="bi bi-facebook icons fs-4" style="padding:8px 12px"></i>
+              </a>
+              <a href="# " class=" text-decoration-none">
+                <i class="bi bi-instagram icons fs-4" style="padding:8px 12px"></i>
+              </a>
+              <a href="# " class=" text-decoration-none">
+                <i class="bi bi-whatsapp icons fs-4" style="padding:8px 12px"></i>
+              </a>
+              <a href="" class=" text-decoration-none">
+                <i class="bi bi-linkedin icons fs-4" style="padding:8px 12px"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-8 footer2 pb-5 pt-4">
+          <div style="margin-left: 30px;" class="d-flex mt-5 pt-3">
+            <div class="col-md-4">
+              <h4>About us</h4>
+              <p class="m-0">Perusahaan</p>
+              <p class="m-0">Blog</p>
+            </div>
+            <div class="col-md-4">
+              <h4>Product</h4>
+              <p class="m-0">Ringkasan</p>
+              <p class="m-0">Fitur</p>
+            </div>
+            <div class="col-md-4">
+              <h4>Help</h4>
+              <p class="m-0">Syarat dan Ketentuan</p>
+              <p class="m-0">Kebijakan Privasi</p>
+              <p class="m-0">Kontak</p>
+            </div>
+          </div>
+        </div>
+        <div class="copy col-md-12 text-center p-2">Copyright @2023 Glucotens All Rights Reserved</div>
+      </div>
+    </div>
+  </footer>
+  <div class="modal fade rounded-2" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-4" style="border-radius: 20px;">
+        <div class="modal-header d-flex justify-content-between">
+          <div class="d-flex flex-column">
+            <p class="" style="color: #00D1FFF5; font-weight: 600; font-size: 17px;">New to GlucoTens? Join now!
+            </p>
+            <h5 class="modal-title" style="font-weight: 700; font-size: 28px; margin-top: -13px;" id="modalLoginLabel">
+              Please Login</h5>
+          </div>
+          <button type="button" style="margin-right: 1px;" class="btn-close mb-5" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Isi form login -->
+          <form>
+            <div class="mb-4">
+              <input style="height: 60px; border-radius: 15px;" type="text" class="form-control" id="username"
+                placeholder="Email">
+            </div>
+            <div class="mb-3 pt-2 pb-2 position-relative">
+              <input style="height: 60px; border-radius: 15px;" type="password" class="form-control" id="password"
+                placeholder="Password">
+              <i class="fa fa-eye-slash position-absolute end-0 translate-middle-y me-4"
+                style="cursor: pointer; margin-top: -32px; font-size: 20px;"></i>
+            </div>
+            <p class="" style="color: #00D1FFF5; font-weight: 600; font-size: 17px;">Forget Pass?</p>
+            <div class="d-flex">
+              <button style="width: 130px; font-weight: 700;" type="submit" class="btn btn-primary">Login</button>
+              <a class="mt-auto mb-auto ms-3"
+                style="font-weight: 500; font-size: 16px; line-height: 24px; letter-spacing: 1px; color: black;">
+                Don't have any account?
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tambahkan setelah modal login -->
+  <div class="modal fade" id="modalSignup" tabindex="-1" aria-labelledby="modalSignupLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-4" style="border-radius: 20px;">
+        <div class="modal-header d-flex justify-content-between">
+          <div class="d-flex flex-column">
+            <p class="" style="color: #00D1FFF5; font-weight: 600; font-size: 17px;">New to GlucoTens? Join now!
+            </p>
+            <h5 class="modal-title" style="font-weight: 700; font-size: 28px; margin-top: -13px;" id="modalLoginLabel">
+              Please Sign Up</h5>
+          </div>
+          <button type="button" style="margin-right: 1px;" class="btn-close mb-5" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Isi form login -->
+          <form>
+            <div class="mb-4">
+              <input style="height: 60px; border-radius: 15px;" type="text" class="form-control" id="username"
+                placeholder="Email">
+            </div>
+            <div class="mb-3 pt-2 pb-2 position-relative">
+              <input style="height: 60px; border-radius: 15px;" type="password" class="form-control" id="password"
+                placeholder="Password">
+              <i class="fa fa-eye-slash position-absolute end-0 translate-middle-y me-4"
+                style="cursor: pointer; margin-top: -32px; font-size: 20px;"></i>
+            </div>
+            <div class="mb-3 pt-2 pb-2 position-relative">
+              <input style="height: 60px; border-radius: 15px;" type="password" class="form-control" id="password"
+                placeholder="Confirm Password">
+              <i class="fa fa-eye-slash position-absolute end-0 translate-middle-y me-4"
+                style="cursor: pointer; margin-top: -32px; font-size: 20px;"></i>
+            </div>
+            <p class="" style="color: #00D1FFF5; font-weight: 600; font-size: 17px;">Forget Pass?</p>
+            <div class="d-flex">
+              <button style="width: 130px; font-weight: 700;" type="submit" class="btn btn-primary">Sign up</button>
+              <a class="mt-auto mb-auto ms-3"
+                style="font-weight: 500; font-size: 16px; line-height: 24px; letter-spacing: 1px; color: black;">
+                Already have any account?
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

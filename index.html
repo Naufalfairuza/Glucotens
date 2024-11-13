@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      body {
+        padding-top: 56px;
+        /* Adjust this value based on your navbar height */
+      }
+      .close-btn {
+        border: none;
+        background: none;
+        padding: 0;
+        cursor: pointer;
+      }
+
+      .myPurple {
+        color: #6610f2;
+      }
+
+      .col-md-2,
+      .col-md-4,
+      .col-md-5 {
+        margin-bottom: 20px;
+      }
+
+      .gluco {
+        color: #6610f2;
+        font-size: 30px;
+        font-weight: 700;
+      }
+
+      .tens {
+        color: black;
+        font-size: 30px;
+        font-weight: 700;
+      }
+
+      .glucodrop {
+        color: #6610f2;
+        font-size: 30px;
+        font-weight: 600;
+      }
+
+      .tensdrop {
+        color: black;
+        font-size: 30px;
+        font-weight: 600;
+      }
+
+      .titlenav {
+        margin-left: 240px;
+        text-decoration: none;
+      }
+
+      .titledrop {
+        margin-left: 60px;
+        text-decoration: none;
+      }
+
+      .nav-link.btn.btn-login {
+        background-color: #6610f2;
+        color: white;
+        border: 2px solid #6610f2;
+        border-radius: 5px;
+        padding: 5px 10px;
+        text-decoration: none;
+        width: 130px;
+      }
+
+      .nav-link.btn.btn-signup {
+        background-color: transparent;
+        color: inherit;
+        border: 2px solid #6610f2;
+        border-radius: 5px;
+        padding: 5px 10px;
+        text-decoration: none;
+        width: 130px;
+      }
+
+      .grafik {
+        color: black;
+        /* Warna hitam untuk tulisan "Grafik" */
+        font-weight: 700;
+      }
+
+      .gula-darah {
+        color: #e6681a;
+        /* Warna #E6681A untuk tulisan "Gula Darah" */
+        font-weight: 700;
+      }
+
+      .modal-content .btn-close {
+        border: 2px solid black;
+        border-radius: 50%;
+        color: black;
+        width: 15px;
+        height: 25px;
+        line-height: 1.5;
+        padding: 0;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      }
+
+      .modal-content .btn-close:hover {
+        background-color: #6610f2;
+        color: white;
+      }
+
+      .modal-header {
+        border-bottom: none;
+      }
+    </style>
+    <title>GLUCOTENS</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top shadow">
+      <div class="container">
+        <!-- Bagian Kiri -->
+        <div style="width: 10%" class="navbar-collapse">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <div class="dropdown">
+                <a
+                  class="btn btn-secondary"
+                  href="#"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa fa-bars" aria-hidden="true"></i>
+                </a>
+
+                <ul
+                  class="dropdown-menu p-2"
+                  aria-labelledby="dropdownMenuLink"
+                  style="width: 270px"
+                >
+                  <li>
+                    <a class="titledrop" href="index.html"
+                      ><span class="glucodrop">Gluco</span
+                      ><span class="tensdrop">Tens</span></a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">Community</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Popular searchers</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">About Dieases</a></li>
+                  <li><a class="dropdown-item" href="#">PGDM</a></li>
+                  <li><a class="dropdown-item" href="#">Notebook</a></li>
+                  <li><a class="dropdown-item" href="#">Product</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <a class="titlenav" href="index.html"
+          ><span class="gluco">Gluco</span><span class="tens">Tens</span></a
+        >
+
+        <div style="width: 30%" class="navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <div class="nav-link">
+                <i class="fas fa-bell fa-lg me-3" style="color: orange"></i>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                href="#"
+                class="nav-link me-3"
+                data-bs-toggle="modal"
+                data-bs-target="#modalprofile"
+              >
+                <i class="fas fa-user me-1"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="image/image 1.jpg" alt="" width="480" height="357" />
+        </div>
+        <div class="col-md-6">
+          <h2 class="cek">
+            Cek <span class="beratbadan">Berat Badan</span> Ideal mu
+            <br />Sesuai <span class="beratbadan">Tinggi</span>
+          </h2>
+          <p class="bmi">
+            BMI (Body Mass Index) adalah suatu indeks yang mengukur proporsi
+            berat badan terhadap tinggi badan seseorang. Tujuannya adalah untuk
+            mengevaluasi apakah seseorang memiliki berat badan yang sehat,
+            kurang berat, atau berlebihan. BMI membantu dalam penilaian risiko
+            kesehatan terkait dengan kesehatan yang dipengaruhi oleh gula dan
+            tekanan darah
+          </p>
+          <a href="kalkulator_bmi.html" class="btn btn-detial px-5">Detail</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-12 text-center mb-3 mt-5">
+          <h2>Our Tools</h2>
+        </div>
+        <a
+          href="gula_darah.html"
+          class="col-md-2 offset-md-1 text-center text-decoration-none"
+        >
+          <img src="image/tool1.jpg" height="150px" />
+          <div class="fw-bold text-dark">Gula Darah Tracking</div>
+        </a>
+        <a
+          href="tekanan_darah.html"
+          class="col-md-2 text-center text-decoration-none"
+        >
+          <img src="image/tool2.jpg" height="150px" />
+          <div class="fw-bold text-dark">Blood Pressure Tracking</div>
+        </a>
+        <a href="Cardiovascular_activity.html" class="col-md-2 text-center text-decoration-none">
+          <img src="image/tool3.jpg" height="150px" />
+          <div class="fw-bold text-dark">Cardiovascular activity</div>
+        </a>
+        <a href="#" class="col-md-2 text-center text-decoration-none">
+          <img src="image/tool4.jpg" height="150px" />
+          <div class="fw-bold text-dark">MAP Calculator</div>
+        </a>
+        <a href="Kalkulator_kalori.html" class="col-md-2 text-center text-decoration-none">
+          <img src="image/tool5.jpg" height="150px" />
+          <div class="fw-bold text-dark">Calori Calculator</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-12 text-center mb-3 mt-5">
+          <h2 class="mb-5">Latest on Glucotens</h2>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center pb-4 shadow" style="border-radius: 10px">
+            <img src="image/news 1.jpg" width="100%" />
+            <p style="min-height: 80px" class="fw-bold mt-3">
+              Obesity scientist who popularised the Body Mass Index and waged
+              war on junk food – obituary
+            </p>
+            <a
+              href="detail.html"
+              style="width: 70%; margin-left: 13%"
+              class="btn btn-outline w-75"
+              >Detail</a
+            >
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center pb-4 shadow" style="border-radius: 10px">
+            <img src="image/news 2.jpg" width="100%" />
+            <p style="min-height: 80px" class="fw-bold mt-3">
+              Best Nutrition and Diet Tips
+            </p>
+            <a
+              href="detailnews2.html"
+              style="width: 70%; margin-left: 13%"
+              class="btn btn-outline w-75"
+            >
+              Detail
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center pb-4 shadow" style="border-radius: 10px">
+            <img src="image/news 3.jpg" width="100%" />
+            <p style="min-height: 80px" class="fw-bold mt-3">
+              What Is Subcutaneous Fat, and Is It Easy to Lose?
+            </p>
+            <a
+              href="detailnews3.html"
+              style="width: 70%; margin-left: 13%"
+              class="btn btn-outline w-75"
+            >
+              Detail
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center pb-4 shadow" style="border-radius: 10px">
+            <img src="image/news 4.jpg" width="100%" />
+            <p style="min-height: 80px" class="fw-bold mt-3">
+              Many kids that have obesity start in 5 years old in america
+            </p>
+            <a
+              href="detailnews4.html"
+              style="width: 70%; margin-left: 13%"
+              class="btn btn-outline w-75"
+            >
+              Detail
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-12 text-center mb-3 mt-5">
+          <h2>Our Medical Advisory</h2>
+          <p class="" style="font-weight: 600; font-size: 20px">
+            Meet our medical advisors — highly respected experts who ensure
+            <br />
+            our content is complete and accurate
+          </p>
+        </div>
+      </div>
+      <div
+        class="row justify-content-center"
+        style="margin-left: 20%; width: 70%"
+      >
+        <div class="col-md-6 row mt-5">
+          <div class="col-md-12">
+            <img
+              class="rounded-circle"
+              height="80"
+              width="80"
+              src="image/dokter1.jpg"
+            />
+            <label style="font-weight: 700; margin-left: 8px"
+              >Dr. Indah Purnamasari
+            </label>
+          </div>
+          <div class="col-md-12 mt-5">
+            <img
+              class="rounded-circle"
+              height="80"
+              width="80"
+              src="image/dokter2.jpg"
+            />
+            <label style="font-weight: 700; margin-left: 8px"
+              >Dr. Leonardo Hadinata
+            </label>
+          </div>
+        </div>
+        <div class="col-md-6 row mt-5">
+          <div class="col-md-12">
+            <img
+              class="rounded-circle"
+              height="80"
+              width="80"
+              src="image/dokter3.jpg"
+            />
+            <label style="font-weight: 700; margin-left: 8px"
+              >Dr. Elizabeth Estina Tanjung
+            </label>
+          </div>
+          <div class="col-md-12 mt-5">
+            <img
+              class="rounded-circle"
+              height="80"
+              width="80"
+              src="image/dokter4.jpg"
+            />
+            <label style="font-weight: 700; margin-left: 8px"
+              >Dr. Andrew Hutama</label
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-white mt-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div
+            class="col-md-4 py footer1"
+            style="margin-bottom: 0px !important"
+          >
+            <div class="mt-5 ms-5">
+              <img src="image/GlucoTens.png" alt="" width="150" />
+              <h4 class="help mt-3">
+                Help you to maintain your body from diseases by
+              </h4>
+              <p class="mt-3 d-flex gap-4 mt-5">
+                Follow us
+                <a href="# " class="text-decoration-none">
+                  <i
+                    class="bi bi-facebook icons fs-4"
+                    style="padding: 8px 12px"
+                  ></i>
+                </a>
+                <a href="# " class="text-decoration-none">
+                  <i
+                    class="bi bi-instagram icons fs-4"
+                    style="padding: 8px 12px"
+                  ></i>
+                </a>
+                <a href="# " class="text-decoration-none">
+                  <i
+                    class="bi bi-whatsapp icons fs-4"
+                    style="padding: 8px 12px"
+                  ></i>
+                </a>
+                <a href="" class="text-decoration-none">
+                  <i
+                    class="bi bi-linkedin icons fs-4"
+                    style="padding: 8px 12px"
+                  ></i>
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-8 footer2 pb-5 pt-4">
+            <div style="margin-left: 30px" class="d-flex mt-5 pt-3">
+              <div class="col-md-4">
+                <h4>About us</h4>
+                <p class="m-0">Perusahaan</p>
+                <p class="m-0">Blog</p>
+              </div>
+              <div class="col-md-4">
+                <h4>Product</h4>
+                <p class="m-0">Ringkasan</p>
+                <p class="m-0">Fitur</p>
+              </div>
+              <div class="col-md-4">
+                <h4>Help</h4>
+                <p class="m-0">Syarat dan Ketentuan</p>
+                <p class="m-0">Kebijakan Privasi</p>
+                <p class="m-0">Kontak</p>
+              </div>
+            </div>
+          </div>
+          <div class="copy col-md-12 text-center p-2">
+            Copyright @2023 Glucotens All Rights Reserved
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="modal fade rounded-2"
+      id="modalprofile"
+      tabindex="-1"
+      aria-labelledby="modalLoginLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" style="width: 300px">
+        <div class="modal-content">
+          <div class="d-flex align-items-center modal-header bg-primary">
+            <div class="d-flex">
+              <img
+                src="data:image/png;base64,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"
+                alt="Profile Image"
+                class="rounded-circle"
+                width="40"
+                height="40"
+              />
+              <div
+                class="ms-2 mt-auto mb-auto"
+                style="font-size: 17px; font-weight: 700"
+              >
+                Peters Kaisen
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="p-3">
+              <h4 class="mb-4">Account</h4>
+              <div
+                class="d-flex flex-column justify-content-end gap-3 ms-3 pb-3"
+              >
+                <div
+                  id="editProfileBtn"
+                  style="font-weight: 700; cursor: pointer"
+                >
+                  <i class="fas fa-user"></i> Edit Profile
+                </div>
+                <div style="font-weight: 700">
+                  <i class="fas fa-question-circle"></i> Help/Support
+                </div>
+                <div style="font-weight: 700">
+                  <i class="fas fa-sign-out-alt"></i> SignOut
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalEditProfile"
+      tabindex="-1"
+      aria-labelledby="modalEditProfileLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-4" style="border-radius: 20px">
+          <div class="modal-header">
+            <button class="close-btn"><i class="fas fa-arrow-left"></i></button>
+            <h4>Edit Profile</h4>
+          </div>
+          <div class="modal-body">
+            <div class="text-center mb-4">
+              <img
+                src="data:image/png;base64,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"
+                alt="Profile Image"
+                class="rounded-circle"
+                width="100"
+                height="100"
+              />
+            </div>
+            <form>
+              <div class="mb-4">
+                <label style="font-weight: 700" class="mb-2" for="">Name</label>
+                <input
+                  style="height: 60px; border-radius: 15px"
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  placeholder="Name"
+                />
+              </div>
+              <div class="mb-3 pt-2 pb-2 position-relative">
+                <label style="font-weight: 700" class="mb-2" for=""
+                  >Email</label
+                >
+                <input
+                  style="height: 60px; border-radius: 15px"
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Email"
+                />
+                <i
+                  class="fa fa-eye-slash position-absolute end-0 translate-middle-y me-4"
+                  style="cursor: pointer; margin-top: -32px; font-size: 20px"
+                ></i>
+              </div>
+              <div class="mb-3 pt-2 pb-2 position-relative">
+                <label style="font-weight: 700" class="mb-2" for=""
+                  >Password</label
+                >
+                <input
+                  style="height: 60px; border-radius: 15px"
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Password"
+                />
+                <i
+                  class="fa fa-eye-slash position-absolute end-0 translate-middle-y me-4"
+                  style="cursor: pointer; margin-top: -32px; font-size: 20px"
+                ></i>
+              </div>
+              <div class="mb-3 pt-2 pb-2 position-relative">
+                <label style="font-weight: 700" class="mb-2" for=""
+                  >Country</label
+                >
+                <input
+                  style="height: 60px; border-radius: 15px"
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Country"
+                />
+                <i
+                  class="fa fa-eye-slash position-absolute end-0 translate-middle-y me-4"
+                  style="cursor: pointer; margin-top: -32px; font-size: 20px"
+                ></i>
+              </div>
+              <div class="text-center">
+                <button
+                  style="width: 130px; font-weight: 700"
+                  type="submit"
+                  class="btn btn-primary"
+                >
+                  Save Changes
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tambahkan setelah modal login -->
+    <div
+      class="modal fade"
+      id="modalSignup"
+      tabindex="-1"
+      aria-labelledby="modalSignupLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-4" style="border-radius: 20px">
+          <div
+            class="modal-header d-flex justify-content-between"
+            style="background-color: #6610f2"
+          >
+            <div class="d-flex flex-column">
+              <p
+                class=""
+                style="color: #00d1fff5; font-weight: 600; font-size: 17px"
+              >
+                New to GlucoTens? Join now!
+              </p>
+              <h5
+                class="modal-title"
+                style="font-weight: 700; font-size: 28px; margin-top: -13px"
+                id="modalLoginLabel"
+              >
+                Please Login
+              </h5>
+            </div>
+            <button
+              type="button"
+              style="margin-right: 1px"
+              class="btn-close mb-5"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Isi form login -->
+            <form>
+              <div class="mb-4">
+                <input
+                  style="height: 60px; border-radius: 15px"
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="mb-3 pt-2 pb-2 position-relative">
+                <input
+                  style="height: 60px; border-radius: 15px"
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Password"
+                />
+                <i
+                  class="fa fa-eye-slash position-absolute end-0 translate-middle-y me-4"
+                  style="cursor: pointer; margin-top: -32px; font-size: 20px"
+                ></i>
+              </div>
+              <div class="mb-3 pt-2 pb-2 position-relative">
+                <input
+                  style="height: 60px; border-radius: 15px"
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Confirm Password"
+                />
+                <i
+                  class="fa fa-eye-slash position-absolute end-0 translate-middle-y me-4"
+                  style="cursor: pointer; margin-top: -32px; font-size: 20px"
+                ></i>
+              </div>
+              <p
+                class=""
+                style="color: #00d1fff5; font-weight: 600; font-size: 17px"
+              >
+                Forget Pass?
+              </p>
+              <div class="d-flex">
+                <button
+                  style="width: 130px; font-weight: 700"
+                  type="submit"
+                  class="btn btn-primary"
+                >
+                  Login
+                </button>
+                <a
+                  class="mt-auto mb-auto ms-3"
+                  style="
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: 1px;
+                    color: black;
+                  "
+                >
+                  Don't have any account?
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Menggunakan id dari tombol "Edit Profile"
+        $("#editProfileBtn").click(function () {
+          // Menunjukkan modal baru saat tombol diklik
+          $("#modalEditProfile").modal("show");
+        });
+      });
+    </script>
+  </body>
+</html>
